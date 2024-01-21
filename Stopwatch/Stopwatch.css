@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: "Poppins",sans-serif;
+}
+.full{
+    width: 50%;
+    margin: auto;
+    margin-top: 10em;
+}
+.ful{
+    width: max-content;
+    margin: auto;
+}
+.clock{
+    width: max-content;
+    margin: auto;
+}
+.clock > p{
+    font-size: 5em;
+    color: rgb(255, 132, 152);
+    font-weight: 600;
+}
+button{
+    margin: 1em;
+    font-size: 1em;
+    padding: 9px 19px;
+    background-color: rgb(255, 132, 152);
+    border-radius: 25px;
+    font-weight: 550;
+    border: 2px solid black;
+}
+.disable{
+    background-color: rgb(255, 184, 196);
+    pointer-events: none;
+}
