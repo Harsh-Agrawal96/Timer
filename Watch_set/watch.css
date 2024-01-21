@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins",sans-serif;
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: max-content;
+    height: max-content;
+    padding: 1em;
+}
+
+/* set time css */
+.settimer{
+    width: max-content;
+    height: max-content;
+    padding: 1em;
+}
+.innerset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+}
+.real,.section{
+    background-color: rgb(98, 98, 98);
+    padding: 5px;
+    border-bottom: 5px solid black;
+}
+.real > p,.section > p{
+    font-size: 3em;
+    padding : 8px;
+    text-align: center;
+}
+.real > p{
+    border-radius: 5px;
+}
+.forchange{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.inn{
+    font-size: 1.5em;
+    padding: 2px 10px;
+    text-align: center;
+    height: max-content;
+    border-radius: 4px;
+}
+.inn:hover{
+    background-color: rgb(128, 128, 128);
+    cursor: pointer;
+}
+
+
+.whileclick{
+    background-color: rgb(164, 164, 164);
+}
+
+/* set time btn */
+.enter{
+    width: max-content;
+    margin: 2em auto;
+}
+.enter > button{
+    font-size: 1.2em;
+    padding: 12px 50px;
+    border-radius: 10px;
+    border:2px solid black;
+    font-weight: 550;
+}
+
+/* show time css */
+.runtime{
+    width: max-content;
+    height: max-content;
+    margin: auto;
+}
+.runtime > p{
+    font-size: 3.5em;
+    font-weight: 600;
+}
+
+/* show btn css */
+
+.timerbtn{
+    width: max-content;
+    height: max-content;
+    margin : 2em auto;
+}
+.timerbtn > button{
+    font-size: 1em;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border:2px solid black;
+    font-weight: 550;
+    margin: 1em;
+}
+
+/* css for js */
+.hide{
+    display: none;
+}
+.untouched{
+    pointer-events:none;
+    background-color: grey;
+}
