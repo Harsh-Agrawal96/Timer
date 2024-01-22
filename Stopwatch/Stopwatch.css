@@ -36,3 +36,44 @@ button{
     background-color: rgb(255, 184, 196);
     pointer-events: none;
 }
+
+
+/* below css is for the showing lapse data  */
+
+.base{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: max-content;
+    margin: 1em auto;
+    padding-left: 2em;
+}
+.inner1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width:200px;
+}
+.head{
+    border-bottom: 2px solid black;
+    height:max-content;
+    margin: 0px;
+}
+.head > p{
+    font-size: 1.7em;
+    font-weight: 550;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+}
+.content  p{
+    font-size: 1.1em;
+}
+.content > div{
+    margin-left: 0.2em;
+}
