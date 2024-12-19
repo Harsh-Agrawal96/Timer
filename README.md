@@ -5,12 +5,12 @@ This is the basic frontend project which contains different features of clock wh
 
 ---
 
-## ** Features **
+## **Features**
 
-- ** Stopwatch **
+- **Stopwatch**
     This is the stopwatch with start, stop, reset features with a laps time functionality to show in hours, minutes, seconds and milliseconds.
 
-- ** Watch-set **
+- **Watch-set**
     This is timer which allows setting a countdown timer in hours, minutes, seconds and milliseconds with start, stop and reset functionality.
 
 ---
