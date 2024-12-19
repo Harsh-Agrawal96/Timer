@@ -109,11 +109,12 @@ var intervaldata = undefined;
 var initialtime;
 
 function showcontent(data){
-    if( data >= 0 && data <= 9){
+    if(data < 0 ||  data >= 0 && data <= 99){
         console.log( "no");
         document.querySelector('.runtime > p').textContent = "00:00:00";
         start.classList.add('untouched');
         sto.classList.add('untouched');
+        return;
     }
     let milli = Math.floor((data%1000)/10);
     let sec = Math.floor( (data% (1000*60))/(1000) );

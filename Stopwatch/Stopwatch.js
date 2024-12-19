@@ -5,10 +5,10 @@ const time = document.querySelector('.clock > p');
 
 sto.classList.add('disable');
 
-var starttime;
-var currenttime;
-var realtime = 0;
-var intervaldata = undefined;
+let starttime = 0;
+let currenttime = 0;
+let realtime = 0;
+let intervaldata = undefined;
 
 function showcontent(data){
     let milli = Math.floor((data%1000)/10);
@@ -16,7 +16,7 @@ function showcontent(data){
     let min = Math.floor( (data% (1000*60*60))/(1000*60));
     let hour = Math.floor( data/(1000*60*60) );
 
-    time.innerHTML = ( (hour>9 ? hour : "0"+hour) + ":" + ( min>9 ? min : "0" + min ) + ":" + ( sec>9 ? sec : "0" + sec) + "." + ( milli>9 ? milli : "0" + milli));
+    return ( (hour>9 ? hour : "0"+hour) + ":" + ( min>9 ? min : "0" + min ) + ":" + ( sec>9 ? sec : "0" + sec) + "." + ( milli>9 ? milli : "0" + milli));
 }
 
 function startclock() {
@@ -24,7 +24,7 @@ function startclock() {
     intervaldata = setInterval(()=>{
         currenttime = Date.now();
         realtime = currenttime - starttime;
-        showcontent(realtime)
+        time.innerHTML = showcontent(realtime);
         console.log(realtime);
 
     }, 10);
@@ -52,13 +52,14 @@ reset.addEventListener('click',restartclock);
 
 
 // below code is for the showing lapse on click flag type button ( which will we add soon )
-
 var clickcount = 0;
 var newlapseleft;
 var newlapsemid;
 var newlapseright;
 
-const lapse = document.querySelector('button');
+let last_time = 0;
+
+const lapse = document.querySelector('.lap');
 
 lapse.addEventListener('click',function() {
     console.log("je");
@@ -80,9 +81,11 @@ function add_new_lapse(){
     const leftdata = document.createElement('p');// make paragraph for lapse
     leftdata.textContent = clickcount;
     const middata = document.createElement('p');
-    middata.textContent = "hello mid";
+    let data = realtime - last_time;
+    last_time = realtime;
+    middata.textContent = showcontent(data);
     const rightdata = document.createElement('p');
-    rightdata.textContent = "hello right";
+    rightdata.textContent = showcontent(realtime);
 
     leftinitial.appendChild(leftdata); // attach para to div 
     midinitial.appendChild(middata);
@@ -121,7 +124,6 @@ function create_first_lapse(){
 
 
 //  code for first lapse
-
     const leftinitial = document.createElement('div');// make first divs for lapse
     const midinitial = document.createElement('div');
     const rightinitial = document.createElement('div');
@@ -129,16 +131,17 @@ function create_first_lapse(){
     const leftdata = document.createElement('p'); // make paragraph for first lapse
     leftdata.textContent = clickcount;
     const middata = document.createElement('p');
-    middata.textContent = "hello mid";
+    let data = realtime - last_time;
+    last_time = realtime;
+    middata.textContent = showcontent(data);
     const rightdata = document.createElement('p');
-    rightdata.textContent = "hello right";
+    rightdata.textContent = showcontent(realtime);
 
     leftinitial.appendChild(leftdata); // attach para to div
     midinitial.appendChild(middata);
     rightinitial.appendChild(rightdata);
 
 // maked divs for first lapse
-
     newlapseleft.appendChild(leftinitial);  // attach div to main div which content all lapse
     newlapsemid.appendChild(midinitial);
     newlapseright.appendChild(rightinitial);
@@ -173,6 +176,8 @@ function create_first_lapse(){
 // added all css
 
 // now add it to main body
-    document.body.appendChild(main);
+    const divforappend = document.querySelector('.full')
+    divforappend.appendChild(main);
 
 }
+

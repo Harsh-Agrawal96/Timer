@@ -13,6 +13,10 @@
     width: max-content;
     height: max-content;
     padding: 1em;
+    margin-top: 1.5em;
+}
+.inn{
+    background-color: rgb(182, 182, 182);
 }
 
 /* set time css */
@@ -29,7 +33,7 @@
     height: max-content;
 }
 .real,.section{
-    background-color: rgb(98, 98, 98);
+    background-color: rgb(123, 122, 122);
     padding: 5px;
     border-bottom: 5px solid black;
 }

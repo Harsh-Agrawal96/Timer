@@ -1,14 +1,15 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 body{
     font-family: "Poppins",sans-serif;
 }
 .full{
-    width: 50%;
+    width: 80%;
     margin: auto;
-    margin-top: 10em;
+    padding-top: 3em;
 }
 .ful{
     width: max-content;
@@ -36,10 +37,13 @@ button{
     background-color: rgb(255, 184, 196);
     pointer-events: none;
 }
+.lapbtndiv{
+    width: max-content;
+    margin: auto;
+}
 
 
 /* below css is for the showing lapse data  */
-
 .base{
     display: flex;
     justify-content: center;
@@ -76,4 +80,34 @@ button{
 }
 .content > div{
     margin-left: 0.2em;
+}
+
+
+@media screen and ( max-width : 800px ) {
+    .full{
+        padding-top: 2em;
+        width : 100%;
+    }
+    .clock > p{
+        font-size: 2em;
+    }
+    button{
+        margin: 0.5em;
+        font-size: 0.5em;
+        padding: 5px 11px;
+    }
+    .base{
+        padding: 0.4em;
+        padding-left: 0.8em;
+    }
+    .inner1{
+        gap: 0.6em;
+        width: 100px;
+    }
+    .head > p{
+        font-size: 0.8em;
+    }
+    .content p{
+        font-size: 0.6em;
+    }
 }
